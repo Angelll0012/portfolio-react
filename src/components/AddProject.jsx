@@ -43,25 +43,25 @@ function AddProject({ onAddProject }) {
 
   // render the form and its three controlled inputs
   return (
-    <section id="add-project" >
+    <section id="add-project" className="rounded-lg border border-gray-200 bg-white p-5 md:row-span-2">
       {/* provide an anchorable section for adding a project */}
 
       {/* introduce the project submission form */}
-      <h2>Add a New Project</h2>
+      <h2 className="text-xl font-bold">Add a New Project</h2>
 
       {/* submit the entered values through the form handler */}
-      <form onSubmit={handleSubmit}>
+      <form className="mt-4 grid gap-3" onSubmit={handleSubmit}>
 
         {/* render the controlled project-title input */}
-        <input type="text" placeholder="Project title" value={title} onChange={(event) => setTitle(event.target.value)} />
+        <input className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-violet-600 focus:outline-none focus:ring-1 focus:ring-violet-600" type="text" placeholder="Project title" value={title} onChange={(event) => setTitle(event.target.value)} />
 
         {/* render the controlled project-category input */}
-        <input type="text" placeholder="Project category" value={category} onChange={(event) => setCategory(event.target.value)} />
+        <input className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-violet-600 focus:outline-none focus:ring-1 focus:ring-violet-600" type="text" placeholder="Project category" value={category} onChange={(event) => setCategory(event.target.value)} />
 
         {/* render the controlled project-image URL input */}
-        <input type="url" placeholder="Project image URL" value={image} onChange={(event) => setImage(event.target.value)} />
+        <input className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-violet-600 focus:outline-none focus:ring-1 focus:ring-violet-600" type="url" placeholder="Project image URL" value={image} onChange={(event) => setImage(event.target.value)} />
 
-        <button type="submit">Add Project</button>
+        <button className="rounded-md bg-violet-700 px-4 py-2 font-semibold text-white hover:bg-violet-800" type="submit">Add Project</button>
 
       
       </form>

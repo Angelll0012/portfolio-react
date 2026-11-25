@@ -4,7 +4,6 @@ import Hero from "./components/Hero";
 import SearchBar from "./components/SearchBar";
 import ProjectList from "./components/ProjectList";
 import AddProject from "./components/AddProject";
-import "./App.css";
 
 
 function App() {
@@ -53,7 +52,7 @@ function App() {
 
   // render the complete portfolio page
   return (
-    <div>
+    <div className="min-h-screen bg-gray-50 text-gray-900">
       {/* wrap all page sections in the root container */}
       {/* render the main site navigation */}
       <Navbar />
@@ -61,7 +60,7 @@ function App() {
       <Hero />
 
      
-      <main>
+      <main className="mx-auto grid max-w-6xl gap-8 px-4 py-10 md:grid-cols-[260px_minmax(0,1fr)]">
         {/* provide the form that adds projects to the application state */}
         <AddProject onAddProject={addProject} />
 

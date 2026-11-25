@@ -1,23 +1,15 @@
 function Navbar() {
     // render the portfolio brand and the section links
     return (
-        <nav>
-            <h2>My Portfolio </h2>
-            {/* group the links to the main portfolio sections */}
-            <div>
-                {/* navigate to the page's introductory section */}
-                <a href="#home">Home</a>
-                {/* navigate to the project collection */}
-                <a href="#projects">Projects</a>
-                {/* navigate to the project creation form */}
-                <a href="#add-projects">Add projects</a>
-               
+        <nav className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between">
+            <h2 className="text-xl font-bold">My Portfolio</h2>
+            <div className="flex flex-wrap gap-4 text-sm text-gray-600">
+                <a className="hover:text-violet-700" href="#home">Home</a>
+                <a className="hover:text-violet-700" href="#projects">Projects</a>
+                <a className="hover:text-violet-700" href="#add-project">Add projects</a>
             </div>
-           
         </nav>
-
     );
-   
 }
 
 
